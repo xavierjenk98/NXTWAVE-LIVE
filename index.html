@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NXTWAVE LIVE — Music. Comedy. Touring city to city before the world catches up. Get tickets to upcoming shows in New York, Atlanta, Chicago and more." />
+  <title>NXTWAVE LIVE — The Next Wave Is Live</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =============================
+       NAVIGATION
+       ============================= -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="#" class="nav__logo" aria-label="NXTWAVE LIVE — Home">
+            NXT<span>WAVE</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <ul class="nav__links" role="list">
+            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="#shows">Shows</a></li>
+            <li><a href="#apply">Apply</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+              <a href="#apply" class="nav__apply">Apply</a>
+            </li>
+          </ul>
+
+          <!-- Mobile hamburger -->
+          <button
+            class="nav__hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation" hidden>
+        <ul role="list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#shows">Shows</a></li>
+          <li><a href="#apply">Apply</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#apply" class="nav__apply">Apply Now</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =============================
+         1. HERO
+         ============================= -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow" aria-hidden="true">Now Touring — 2025</p>
+          <h1 class="hero__headline display">
+            The Next<br>
+            <span class="accent-line">Wave Is Live.</span>
+          </h1>
+          <p class="hero__sub">
+            Music. Comedy. Touring city to city—before the world catches up.
+          </p>
+          <div class="hero__actions">
+            <a href="#shows" class="btn btn-primary">Get Tickets</a>
+            <a href="#apply" class="btn btn-outline">Apply to Perform</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+        Scroll
+      </div>
+    </section>
+
+    <!-- =============================
+         2. QUICK ACTION BAR
+         ============================= -->
+    <section aria-label="Quick actions">
+      <div class="action-bar">
+        <div class="action-bar__inner">
+          <a href="#shows" class="action-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            View Shows
+          </a>
+          <a href="#shows" class="action-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3"></circle>
+              <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+            See Lineups
+          </a>
+          <a href="#apply" class="action-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+            Apply
+          </a>
+          <a href="#community" class="action-bar__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Join Community
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================
+         3. SHOWS / TOUR
+         ============================= -->
+    <section class="shows" id="shows" aria-labelledby="shows-headline">
+      <div class="container">
+        <div class="shows__header">
+          <div>
+            <span class="section-label">2025 Tour</span>
+            <h2 class="shows__headline display" id="shows-headline">Upcoming Stops</h2>
+          </div>
+          <p class="shows__sub">Tickets sell fast. Don't sleep.</p>
+        </div>
+
+        <div class="shows__grid">
+
+          <!-- New York -->
+          <article class="show-card" aria-label="New York show">
+            <div class="show-card__header">
+              <span class="show-card__badge">On Sale Now</span>
+              <h3 class="show-card__city display">New York</h3>
+              <p class="show-card__date">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                May 12, 2025
+              </p>
+              <p class="show-card__venue">Webster Hall · New York, NY</p>
+            </div>
+            <div class="show-card__lineup">
+              <p class="show-card__lineup-label">Lineup Preview</p>
+              <div class="lineup-names" aria-label="Performing artists">
+                <span>Marquis Cole</span>
+                <span>Layla Voss</span>
+                <span>DJ Sable</span>
+                <span>+3 More</span>
+              </div>
+            </div>
+            <div class="show-card__footer">
+              <a href="#" class="btn btn-primary" aria-label="Get tickets for New York — May 12">Get Tickets</a>
+            </div>
+          </article>
+
+          <!-- Atlanta -->
+          <article class="show-card" aria-label="Atlanta show">
+            <div class="show-card__header">
+              <span class="show-card__badge">On Sale Now</span>
+              <h3 class="show-card__city display">Atlanta</h3>
+              <p class="show-card__date">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                May 18, 2025
+              </p>
+              <p class="show-card__venue">The Masquerade · Atlanta, GA</p>
+            </div>
+            <div class="show-card__lineup">
+              <p class="show-card__lineup-label">Lineup Preview</p>
+              <div class="lineup-names" aria-label="Performing artists">
+                <span>Zara Knight</span>
+                <span>The Brolo</span>
+                <span>Simone Ali</span>
+                <span>+4 More</span>
+              </div>
+            </div>
+            <div class="show-card__footer">
+              <a href="#" class="btn btn-primary" aria-label="Get tickets for Atlanta — May 18">Get Tickets</a>
+            </div>
+          </article>
+
+          <!-- Chicago -->
+          <article class="show-card" aria-label="Chicago show">
+            <div class="show-card__header">
+              <span class="show-card__badge">On Sale Now</span>
+              <h3 class="show-card__city display">Chicago</h3>
+              <p class="show-card__date">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                May 25, 2025
+              </p>
+              <p class="show-card__venue">Thalia Hall · Chicago, IL</p>
+            </div>
+            <div class="show-card__lineup">
+              <p class="show-card__lineup-label">Lineup Preview</p>
+              <div class="lineup-names" aria-label="Performing artists">
+                <span>Pryce Monroe</span>
+                <span>Elle Santos</span>
+                <span>Rico Bands</span>
+                <span>+3 More</span>
+              </div>
+            </div>
+            <div class="show-card__footer">
+              <a href="#" class="btn btn-primary" aria-label="Get tickets for Chicago — May 25">Get Tickets</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================
+         4. THE EXPERIENCE
+         ============================= -->
+    <section class="experience" aria-labelledby="experience-headline">
+      <div class="container">
+        <div class="experience__header">
+          <span class="section-label">The Experience</span>
+          <h2 class="experience__headline display" id="experience-headline">What You're Walking Into</h2>
+        </div>
+        <div class="experience__grid" role="list">
+
+          <div class="exp-item" role="listitem">
+            <p class="exp-item__number display" aria-hidden="true">01</p>
+            <h3 class="exp-item__title display">Live Music</h3>
+            <p class="exp-item__desc">Rising artists before they break. Catch them in small rooms while you still can.</p>
+          </div>
+
+          <div class="exp-item" role="listitem">
+            <p class="exp-item__number display" aria-hidden="true">02</p>
+            <h3 class="exp-item__title display">Comedy</h3>
+            <p class="exp-item__desc">The next voices in stand-up. Unfiltered. Unpredictable. Unforgettable.</p>
+          </div>
+
+          <div class="exp-item" role="listitem">
+            <p class="exp-item__number display" aria-hidden="true">03</p>
+            <h3 class="exp-item__title display">Multi-City Shows</h3>
+            <p class="exp-item__desc">A touring experience, not a one-night event. From New York to Chicago and beyond.</p>
+          </div>
+
+          <div class="exp-item" role="listitem">
+            <p class="exp-item__number display" aria-hidden="true">04</p>
+            <h3 class="exp-item__title display">Crowd Energy</h3>
+            <p class="exp-item__desc">Real rooms. Real reactions. No filters. The kind of energy you can't stream.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================
+         5. CULTURE STATEMENT
+         ============================= -->
+    <section class="culture" aria-label="Brand statement">
+      <div class="container">
+        <blockquote class="culture__quote display">
+          <strong>We don't wait for artists to blow up.</strong>
+          We put them on stage first.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- =============================
+         6. FEATURED TALENT
+         ============================= -->
+    <section class="talent" aria-labelledby="talent-headline">
+      <div class="container">
+        <div class="talent__header">
+          <span class="section-label">Featured Talent</span>
+          <h2 class="talent__headline display" id="talent-headline">Early Names. Big Future.</h2>
+        </div>
+        <div class="talent__grid" role="list">
+
+          <article class="talent-card" role="listitem" aria-label="Marquis Cole — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Music</span>
+              <span class="placeholder-icon" aria-hidden="true">MC</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Marquis Cole</h3>
+              <p class="talent-card__city">Brooklyn, NY</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="Layla Voss — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Music</span>
+              <span class="placeholder-icon" aria-hidden="true">LV</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Layla Voss</h3>
+              <p class="talent-card__city">Atlanta, GA</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="The Brolo — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Comedy</span>
+              <span class="placeholder-icon" aria-hidden="true">TB</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">The Brolo</h3>
+              <p class="talent-card__city">Atlanta, GA</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="Zara Knight — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Music</span>
+              <span class="placeholder-icon" aria-hidden="true">ZK</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Zara Knight</h3>
+              <p class="talent-card__city">Chicago, IL</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="Pryce Monroe — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Music</span>
+              <span class="placeholder-icon" aria-hidden="true">PM</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Pryce Monroe</h3>
+              <p class="talent-card__city">Chicago, IL</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="Simone Ali — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Comedy</span>
+              <span class="placeholder-icon" aria-hidden="true">SA</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Simone Ali</h3>
+              <p class="talent-card__city">Atlanta, GA</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="Elle Santos — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Music</span>
+              <span class="placeholder-icon" aria-hidden="true">ES</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Elle Santos</h3>
+              <p class="talent-card__city">New York, NY</p>
+            </div>
+          </article>
+
+          <article class="talent-card" role="listitem" aria-label="Rico Bands — Artist">
+            <div class="talent-card__img">
+              <span class="talent-card__type">Music</span>
+              <span class="placeholder-icon" aria-hidden="true">RB</span>
+              <div class="talent-card__img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="talent-card__body">
+              <h3 class="talent-card__name">Rico Bands</h3>
+              <p class="talent-card__city">Chicago, IL</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================
+         7. HOW IT WORKS
+         ============================= -->
+    <section class="how" id="about" aria-labelledby="how-headline">
+      <div class="container">
+        <div class="how__header">
+          <span class="section-label">The Process</span>
+          <h2 class="how__headline display" id="how-headline">Built for the Next Wave</h2>
+        </div>
+        <div class="how__steps">
+
+          <div class="step">
+            <div class="step__num display" aria-hidden="true">1</div>
+            <h3 class="step__title display">Apply or Get Scouted</h3>
+            <p class="step__desc">Submit your work or get discovered. We're actively looking for talent that's ready for the stage.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__num display" aria-hidden="true">2</div>
+            <h3 class="step__title display">Hit the Stage</h3>
+            <p class="step__desc">Perform live in front of real crowds in real rooms. No industry gatekeeping—just the stage.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__num display" aria-hidden="true">3</div>
+            <h3 class="step__title display">Tour Across Cities</h3>
+            <p class="step__desc">Build your following city by city before the industry even knows your name.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================
+         8. FOR THE PEOPLE
+         ============================= -->
+    <section class="people" aria-labelledby="people-headline">
+      <div class="container">
+        <div class="people__header">
+          <span class="section-label">Who It's For</span>
+          <h2 class="people__headline display" id="people-headline">Built for Everyone in the Room</h2>
+        </div>
+        <div class="people__grid">
+
+          <div class="people-card">
+            <p class="people-card__label">For Fans</p>
+            <h3 class="people-card__title display">Be Early or Hear About It Later.</h3>
+            <p class="people-card__desc">
+              Catch the artists before the stadiums. Experience shows when they're still intimate, raw, and real.
+            </p>
+          </div>
+
+          <div class="people-card">
+            <p class="people-card__label">For Artists &amp; Comedians</p>
+            <h3 class="people-card__title display">Tour Your Way Into Visibility.</h3>
+            <p class="people-card__desc">
+              Real stages. Real audiences. Touring exposure before the labels and bookers come calling.
+            </p>
+          </div>
+
+          <div class="people-card">
+            <p class="people-card__label">For Industry</p>
+            <h3 class="people-card__title display">Find Talent Before the Numbers Catch Up.</h3>
+            <p class="people-card__desc">
+              Scout emerging artists in live rooms before the streaming algorithms do the work for you.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================
+         9. EMAIL / COMMUNITY
+         ============================= -->
+    <section class="community" id="community" aria-labelledby="community-headline">
+      <div class="container">
+        <span class="section-label" style="margin: 0 auto 1.2rem; display: table;">Community</span>
+        <h2 class="community__headline display" id="community-headline">Stay Close to What's Next</h2>
+        <p class="community__sub">Tour dates. Lineup drops. Early access. No noise.</p>
+        <form class="community__form" role="form" aria-label="Email signup" novalidate>
+          <label for="email-input" class="visually-hidden">Your email address</label>
+          <input
+            id="email-input"
+            type="email"
+            class="community__input"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+            aria-required="true"
+          />
+          <button type="submit" class="community__submit">Join the Wave</button>
+        </form>
+        <p class="community__note">No spam. No algorithms. Just the wave.</p>
+      </div>
+    </section>
+
+    <!-- =============================
+         10. FINAL CTA
+         ============================= -->
+    <section class="final-cta" id="apply" aria-label="Final call to action">
+      <div class="container">
+        <h2 class="final-cta__headline display">Be There <span>First.</span></h2>
+        <p class="final-cta__sub">The next wave doesn't wait. Neither should you.</p>
+        <div class="final-cta__actions">
+          <a href="#shows" class="btn btn-primary">Get Tickets</a>
+          <a href="#apply" class="btn btn-hot">Apply to Perform</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================
+       FOOTER
+       ============================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">NXT<span>WAVE</span> LIVE</div>
+        <nav aria-label="Footer navigation">
+          <ul class="footer__links" role="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#shows">Shows</a></li>
+            <li><a href="#apply">Apply</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+        <p class="footer__copy">&copy; 2025 NXTWAVE LIVE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
