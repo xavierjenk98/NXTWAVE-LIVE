@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NXTWAVE — Music. Comedy. Touring city to city before the world catches up." />
+  <title>NXTWAVE — THE NEXT WAVE IS LIVE.</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
+  <header class="site-nav" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="NXTWAVE Home">NXTWAVE</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#lineups">Lineup</a></li>
+        <li><a href="#apply" class="nav-apply-btn">APPLY</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+      <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+      <ul role="list">
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#lineups">Lineup</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shows" class="mobile-tickets-btn">GET TICKETS</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ==============================
+       MARQUEE TICKER (motion effect)
+  ============================== -->
+  <div class="marquee-strip" aria-hidden="true" role="presentation">
+    <div class="marquee-track">
+      <span>NEW YORK</span><span class="marquee-sep">•</span>
+      <span>ATLANTA</span><span class="marquee-sep">•</span>
+      <span>CHICAGO</span><span class="marquee-sep">•</span>
+      <span>MUSIC</span><span class="marquee-sep">•</span>
+      <span>COMEDY</span><span class="marquee-sep">•</span>
+      <span>LIVE SHOWS</span><span class="marquee-sep">•</span>
+      <span>NEW YORK</span><span class="marquee-sep">•</span>
+      <span>ATLANTA</span><span class="marquee-sep">•</span>
+      <span>CHICAGO</span><span class="marquee-sep">•</span>
+      <span>MUSIC</span><span class="marquee-sep">•</span>
+      <span>COMEDY</span><span class="marquee-sep">•</span>
+      <span>LIVE SHOWS</span><span class="marquee-sep">•</span>
+      <span>NEW YORK</span><span class="marquee-sep">•</span>
+      <span>ATLANTA</span><span class="marquee-sep">•</span>
+      <span>CHICAGO</span><span class="marquee-sep">•</span>
+      <span>MUSIC</span><span class="marquee-sep">•</span>
+      <span>COMEDY</span><span class="marquee-sep">•</span>
+      <span>LIVE SHOWS</span><span class="marquee-sep">•</span>
+    </div>
+  </div>
+
+  <!-- ==============================
+       HERO
+  ============================== -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 id="hero-headline" class="hero-headline">THE NEXT WAVE IS LIVE.</h1>
+      <p class="hero-sub">Music. Comedy. Touring city to city—before the world catches up.</p>
+      <div class="hero-actions">
+        <a href="#shows" class="btn btn-primary">GET TICKETS</a>
+        <a href="#apply" class="btn btn-secondary">APPLY TO PERFORM</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       QUICK ACTION BAR
+  ============================== -->
+  <div class="quick-action-bar" id="quick-action-bar" role="navigation" aria-label="Quick actions">
+    <div class="qab-inner">
+      <a href="#shows" class="qab-item">VIEW SHOWS</a>
+      <a href="#lineups" class="qab-item">SEE LINEUPS</a>
+      <a href="#apply" class="qab-item">APPLY</a>
+      <a href="#community" class="qab-item">JOIN COMMUNITY</a>
+    </div>
+  </div>
+
+  <!-- ==============================
+       UPCOMING STOPS
+  ============================== -->
+  <section class="shows-section" id="shows" aria-labelledby="shows-headline">
+    <div class="section-inner">
+      <h2 id="shows-headline" class="section-headline">UPCOMING STOPS</h2>
+      <div class="shows-grid">
+
+        <!-- NYC Card -->
+        <article class="show-card" id="show-nyc" aria-labelledby="show-nyc-title">
+          <div class="show-card-header">
+            <span class="show-city" id="show-nyc-title">NEW YORK</span>
+            <span class="urgency-badge">🔥 Selling Fast</span>
+          </div>
+          <div class="show-date">MAY 12, 2026</div>
+          <div class="show-venue">Webster Hall • 8:00 PM</div>
+          <div class="show-price">From $25</div>
+          <div class="show-actions">
+            <a href="#" class="btn btn-tickets" aria-label="Get tickets for New York show">GET TICKETS</a>
+            <button class="btn btn-lineup-toggle" aria-expanded="false" aria-controls="lineup-nyc" aria-label="View lineup for New York show">
+              View lineup <span class="lineup-chevron" aria-hidden="true">▼</span>
+            </button>
+          </div>
+          <div class="lineup-drawer" id="lineup-nyc" hidden aria-live="polite">
+            <div class="lineup-drawer-inner">
+              <div class="lineup-section">
+                <h4>Music</h4>
+                <ul>
+                  <li>Jordan Ray — Alt-R&B / Brooklyn</li>
+                  <li>SAVII — Hip-Hop / Bronx</li>
+                  <li>Melo Vibe — Neo-Soul / Harlem</li>
+                </ul>
+              </div>
+              <div class="lineup-section">
+                <h4>Comedy</h4>
+                <ul>
+                  <li>Dom Torres — Observational / NYC</li>
+                  <li>Nia Fields — Storytelling / Brooklyn</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ATL Card -->
+        <article class="show-card" id="show-atl" aria-labelledby="show-atl-title">
+          <div class="show-card-header">
+            <span class="show-city" id="show-atl-title">ATLANTA</span>
+            <span class="urgency-badge urgency-limited">⚡ Limited Tickets</span>
+          </div>
+          <div class="show-date">MAY 18, 2026</div>
+          <div class="show-venue">The Masquerade • 9:00 PM</div>
+          <div class="show-price">From $20</div>
+          <div class="show-actions">
+            <a href="#" class="btn btn-tickets" aria-label="Get tickets for Atlanta show">GET TICKETS</a>
+            <button class="btn btn-lineup-toggle" aria-expanded="false" aria-controls="lineup-atl" aria-label="View lineup for Atlanta show">
+              View lineup <span class="lineup-chevron" aria-hidden="true">▼</span>
+            </button>
+          </div>
+          <div class="lineup-drawer" id="lineup-atl" hidden aria-live="polite">
+            <div class="lineup-drawer-inner">
+              <div class="lineup-section">
+                <h4>Music</h4>
+                <ul>
+                  <li>Cali Fitz — Trap Soul / Atlanta</li>
+                  <li>DeShawn Waves — R&B / East Point</li>
+                  <li>Luna K — Pop Fusion / Buckhead</li>
+                </ul>
+              </div>
+              <div class="lineup-section">
+                <h4>Comedy</h4>
+                <ul>
+                  <li>Marcus Bell — Crowd Work / ATL</li>
+                  <li>Simone Layne — Alt Comedy / Decatur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CHI Card -->
+        <article class="show-card" id="show-chi" aria-labelledby="show-chi-title">
+          <div class="show-card-header">
+            <span class="show-city" id="show-chi-title">CHICAGO</span>
+            <span class="urgency-badge">🎟 On Sale Now</span>
+          </div>
+          <div class="show-date">MAY 25, 2026</div>
+          <div class="show-venue">Thalia Hall • 8:30 PM</div>
+          <div class="show-price">From $22</div>
+          <div class="show-actions">
+            <a href="#" class="btn btn-tickets" aria-label="Get tickets for Chicago show">GET TICKETS</a>
+            <button class="btn btn-lineup-toggle" aria-expanded="false" aria-controls="lineup-chi" aria-label="View lineup for Chicago show">
+              View lineup <span class="lineup-chevron" aria-hidden="true">▼</span>
+            </button>
+          </div>
+          <div class="lineup-drawer" id="lineup-chi" hidden aria-live="polite">
+            <div class="lineup-drawer-inner">
+              <div class="lineup-section">
+                <h4>Music</h4>
+                <ul>
+                  <li>Ayo Beats — Drill-Funk / South Side</li>
+                  <li>Kezia Moon — Indie Soul / Logan Square</li>
+                  <li>THEO — Electronic / Wicker Park</li>
+                </ul>
+              </div>
+              <div class="lineup-section">
+                <h4>Comedy</h4>
+                <ul>
+                  <li>Big Remy — Stand-up / Chi</li>
+                  <li>Priya Soni — Storytelling / Pilsen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       THE EXPERIENCE
+  ============================== -->
+  <section class="experience-section" aria-labelledby="experience-headline">
+    <div class="section-inner">
+      <h2 id="experience-headline" class="section-headline">WHAT YOU'RE WALKING INTO</h2>
+      <div class="experience-grid">
+        <div class="exp-card">
+          <span class="exp-icon" aria-hidden="true">🎵</span>
+          <h3>LIVE MUSIC</h3>
+          <p>Rising artists before they break</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-icon" aria-hidden="true">🎤</span>
+          <h3>COMEDY</h3>
+          <p>The next voices in stand-up</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-icon" aria-hidden="true">🌆</span>
+          <h3>MULTI-CITY SHOWS</h3>
+          <p>A touring experience, not a one-night event</p>
+        </div>
+        <div class="exp-card">
+          <span class="exp-icon" aria-hidden="true">⚡</span>
+          <h3>CROWD ENERGY</h3>
+          <p>Real rooms. Real reactions. No filters</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       CULTURE STATEMENT
+  ============================== -->
+  <section class="culture-section" aria-labelledby="culture-statement">
+    <div class="section-inner">
+      <blockquote class="culture-quote" id="culture-statement">
+        <p>We don't wait for artists to blow up.</p>
+        <p>We put them on stage first.</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FEATURED TALENT / LINEUPS
+  ============================== -->
+  <section class="talent-section" id="lineups" aria-labelledby="talent-headline">
+    <div class="section-inner">
+      <h2 id="talent-headline" class="section-headline">EARLY NAMES. BIG FUTURE.</h2>
+
+      <div class="talent-tabs" role="tablist" aria-label="Talent category">
+        <button class="talent-tab active" role="tab" aria-selected="true" aria-controls="tab-music" id="tab-btn-music">Music</button>
+        <button class="talent-tab" role="tab" aria-selected="false" aria-controls="tab-comedy" id="tab-btn-comedy" tabindex="-1">Comedy</button>
+      </div>
+
+      <div class="talent-panel" id="tab-music" role="tabpanel" aria-labelledby="tab-btn-music">
+        <div class="talent-grid">
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">JR</div>
+            <div class="talent-info">
+              <div class="talent-name">Jordan Ray</div>
+              <div class="talent-tags"><span>Alt-R&B</span><span>Brooklyn</span></div>
+            </div>
+          </div>
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">SV</div>
+            <div class="talent-info">
+              <div class="talent-name">SAVII</div>
+              <div class="talent-tags"><span>Hip-Hop</span><span>Bronx</span></div>
+            </div>
+          </div>
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">CF</div>
+            <div class="talent-info">
+              <div class="talent-name">Cali Fitz</div>
+              <div class="talent-tags"><span>Trap Soul</span><span>Atlanta</span></div>
+            </div>
+          </div>
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">LK</div>
+            <div class="talent-info">
+              <div class="talent-name">Luna K</div>
+              <div class="talent-tags"><span>Pop Fusion</span><span>ATL</span></div>
+            </div>
+          </div>
+          <div class="talent-card talent-card-tba">
+            <div class="talent-avatar" aria-hidden="true">?</div>
+            <div class="talent-info">
+              <div class="talent-name">HEADLINER SLOT</div>
+              <div class="talent-tags"><span>TBA</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="talent-panel" id="tab-comedy" role="tabpanel" aria-labelledby="tab-btn-comedy" hidden>
+        <div class="talent-grid">
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">DT</div>
+            <div class="talent-info">
+              <div class="talent-name">Dom Torres</div>
+              <div class="talent-tags"><span>Observational</span><span>NYC</span></div>
+            </div>
+          </div>
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">NF</div>
+            <div class="talent-info">
+              <div class="talent-name">Nia Fields</div>
+              <div class="talent-tags"><span>Storytelling</span><span>Brooklyn</span></div>
+            </div>
+          </div>
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">MB</div>
+            <div class="talent-info">
+              <div class="talent-name">Marcus Bell</div>
+              <div class="talent-tags"><span>Crowd Work</span><span>ATL</span></div>
+            </div>
+          </div>
+          <div class="talent-card">
+            <div class="talent-avatar" aria-hidden="true">SL</div>
+            <div class="talent-info">
+              <div class="talent-name">Simone Layne</div>
+              <div class="talent-tags"><span>Alt Comedy</span><span>Decatur</span></div>
+            </div>
+          </div>
+          <div class="talent-card talent-card-tba">
+            <div class="talent-avatar" aria-hidden="true">?</div>
+            <div class="talent-info">
+              <div class="talent-name">HEADLINER SLOT</div>
+              <div class="talent-tags"><span>TBA</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       HOW IT WORKS
+  ============================== -->
+  <section class="how-section" aria-labelledby="how-headline">
+    <div class="section-inner">
+      <h2 id="how-headline" class="section-headline">BUILT FOR THE NEXT WAVE</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-num" aria-hidden="true">01</div>
+          <h3>APPLY OR GET SCOUTED</h3>
+          <p>Submit your info or get spotted by our team.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num" aria-hidden="true">02</div>
+          <h3>HIT THE STAGE</h3>
+          <p>Perform in front of real crowds that care.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num" aria-hidden="true">03</div>
+          <h3>TOUR ACROSS CITIES</h3>
+          <p>Grow your reach. Build your name. City by city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FOR THE PEOPLE
+  ============================== -->
+  <section class="for-section" id="about" aria-labelledby="for-headline">
+    <div class="section-inner">
+      <h2 id="for-headline" class="sr-only">For Fans, Artists, and Industry</h2>
+      <div class="for-grid">
+        <div class="for-card">
+          <h3>FOR FANS</h3>
+          <p>Be early or hear about it later.</p>
+          <a href="#shows" class="btn btn-outline">GET TICKETS</a>
+        </div>
+        <div class="for-card">
+          <h3>FOR ARTISTS &amp; COMEDIANS</h3>
+          <p>Tour your way into visibility.</p>
+          <a href="#apply" class="btn btn-outline">APPLY NOW</a>
+        </div>
+        <div class="for-card">
+          <h3>FOR INDUSTRY</h3>
+          <p>Find talent before the numbers catch up.</p>
+          <a href="#community" class="btn btn-outline">CONNECT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       PARTNERS / TRUST STRIP
+  ============================== -->
+  <section class="partners-section" aria-labelledby="partners-headline">
+    <div class="section-inner">
+      <h2 id="partners-headline" class="partners-title">PARTNERS &amp; PRESS</h2>
+      <div class="partners-strip" role="list" aria-label="Partners and media mentions">
+        <div class="partner-item" role="listitem">Partner Venue</div>
+        <div class="partner-item" role="listitem">Media</div>
+        <div class="partner-item" role="listitem">Community</div>
+        <div class="partner-item" role="listitem">Booking Partner</div>
+        <div class="partner-item" role="listitem">Press</div>
+        <div class="partner-item" role="listitem">Sponsor</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FAQ ACCORDION
+  ============================== -->
+  <section class="faq-section" aria-labelledby="faq-headline">
+    <div class="section-inner">
+      <h2 id="faq-headline" class="section-headline">FAQ</h2>
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <h3>
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-1">
+              How do tickets work?
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-1" hidden>
+            <p>Tickets are sold directly through our site. After purchase, you'll receive a confirmation email with your QR code — just show it at the door. Tickets are non-refundable but fully transferable. Doors typically open 30 minutes before showtime.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <h3>
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-2">
+              How do performers get booked?
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-2" hidden>
+            <p>Artists and comedians can apply directly through the Apply section below. Our team reviews every submission and scouts independently at shows and online. If you're a fit for an upcoming stop, we'll reach out within 2 weeks of your application.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <h3>
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-3">
+              Is this 21+? What about accessibility?
+              <span class="faq-chevron" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-3" hidden>
+            <p>Age requirements vary by venue. Each show listing will note the age policy clearly — some are all-ages, others are 18+ or 21+. All venues we work with are ADA accessible. If you have specific accessibility needs, email us before the show and we'll make sure you're taken care of.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       APPLY TO PERFORM
+  ============================== -->
+  <section class="apply-section" id="apply" aria-labelledby="apply-headline">
+    <div class="section-inner">
+      <h2 id="apply-headline" class="section-headline">APPLY TO PERFORM</h2>
+      <p class="apply-sub">Two spots. One stage. Let's see what you've got.</p>
+
+      <div class="apply-tabs" role="tablist" aria-label="Application type">
+        <button class="apply-tab active" role="tab" aria-selected="true" aria-controls="apply-music" id="apply-tab-music">🎵 MUSIC ARTIST</button>
+        <button class="apply-tab" role="tab" aria-selected="false" aria-controls="apply-comedy" id="apply-tab-comedy" tabindex="-1">🎤 COMEDY</button>
+      </div>
+
+      <!-- MUSIC APPLICATION -->
+      <div class="apply-panel" id="apply-music" role="tabpanel" aria-labelledby="apply-tab-music">
+        <form class="apply-form" id="form-music" novalidate>
+          <div class="form-section-title">Basic Info</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="m-artist-name">Artist Name <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="m-artist-name" name="artistName" required autocomplete="name" placeholder="Your stage name" />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="m-email">Email <span class="req" aria-label="required">*</span></label>
+              <input type="email" id="m-email" name="email" required autocomplete="email" placeholder="you@email.com" />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="m-phone">Phone</label>
+              <input type="tel" id="m-phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="m-city">City / Location <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="m-city" name="city" required autocomplete="address-level2" placeholder="Brooklyn, NY" />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="m-genre">Genre <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="m-genre" name="genre" required placeholder="e.g. Alt-R&B, Hip-Hop, Indie" />
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-section-title">Links</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="m-spotify">Spotify / Apple Music <span class="req" aria-label="required">*</span></label>
+              <input type="url" id="m-spotify" name="spotify" required placeholder="https://open.spotify.com/..." />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="m-social">Instagram / TikTok <span class="req" aria-label="required">*</span></label>
+              <input type="url" id="m-social" name="social" required placeholder="https://instagram.com/..." />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="m-youtube">YouTube</label>
+              <input type="url" id="m-youtube" name="youtube" placeholder="https://youtube.com/..." />
+            </div>
+          </div>
+
+          <div class="form-section-title">Short Answers</div>
+          <div class="form-grid">
+            <div class="form-group form-group-full">
+              <label for="m-why">Why do you want to perform on NXTWAVE? <span class="req" aria-label="required">*</span></label>
+              <textarea id="m-why" name="why" required rows="3" placeholder="Tell us why this platform is the right fit for you..."></textarea>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="m-standout">What makes your live performance stand out? <span class="req" aria-label="required">*</span></label>
+              <textarea id="m-standout" name="standout" required rows="3" placeholder="Stage presence, energy, crowd connection..."></textarea>
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-section-title">Optional — but useful</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="m-draw">Estimated local draw</label>
+              <input type="text" id="m-draw" name="draw" placeholder="e.g. 50–100 people" />
+            </div>
+            <div class="form-group">
+              <label for="m-releasing">Currently releasing music?</label>
+              <select id="m-releasing" name="releasing">
+                <option value="">Select one</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="soon">Coming soon</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="m-travel" name="travel" />
+              <span>I'm available to travel for multi-city dates.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">SUBMIT APPLICATION</button>
+          <div class="form-success" id="form-music-success" hidden aria-live="polite" role="status">
+            <span class="success-icon" aria-hidden="true">✓</span>
+            <strong>Application received.</strong> We'll reach out if it's a fit. Keep creating.
+          </div>
+        </form>
+      </div>
+
+      <!-- COMEDY APPLICATION -->
+      <div class="apply-panel" id="apply-comedy" role="tabpanel" aria-labelledby="apply-tab-comedy" hidden>
+        <form class="apply-form" id="form-comedy" novalidate>
+          <div class="form-section-title">Basic Info</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="c-name">Comedian Name <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="c-name" name="comedianName" required autocomplete="name" placeholder="Your stage name" />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email <span class="req" aria-label="required">*</span></label>
+              <input type="email" id="c-email" name="email" required autocomplete="email" placeholder="you@email.com" />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone</label>
+              <input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="c-city">City / Location <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="c-city" name="city" required autocomplete="address-level2" placeholder="Atlanta, GA" />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="c-style">Style <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="c-style" name="style" required placeholder="e.g. Observational, Storytelling, Crowd Work" />
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-section-title">Links</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="c-social">Instagram / TikTok <span class="req" aria-label="required">*</span></label>
+              <input type="url" id="c-social" name="social" required placeholder="https://instagram.com/..." />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="c-youtube">YouTube or stand-up clips <span class="req" aria-label="required">*</span></label>
+              <input type="url" id="c-youtube" name="youtube" required placeholder="https://youtube.com/..." />
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-section-title">Performance Proof <span class="req" aria-label="required">*</span></div>
+          <p class="form-help-text">Paste YouTube / Instagram / Google Drive links to 1–3 stand-up or live set clips.</p>
+          <div class="form-grid">
+            <div class="form-group form-group-full">
+              <label for="c-clip1">Clip 1 <span class="req" aria-label="required">*</span></label>
+              <input type="url" id="c-clip1" name="clip1" required placeholder="https://youtube.com/..." />
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="c-clip2">Clip 2</label>
+              <input type="url" id="c-clip2" name="clip2" placeholder="https://youtube.com/..." />
+            </div>
+            <div class="form-group form-group-full">
+              <label for="c-clip3">Clip 3</label>
+              <input type="url" id="c-clip3" name="clip3" placeholder="https://youtube.com/..." />
+            </div>
+          </div>
+
+          <div class="form-section-title">Short Answers</div>
+          <div class="form-grid">
+            <div class="form-group form-group-full">
+              <label for="c-why">Why do you want to perform on NXTWAVE? <span class="req" aria-label="required">*</span></label>
+              <textarea id="c-why" name="why" required rows="3" placeholder="Tell us why this platform fits your trajectory..."></textarea>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="c-crowd">What type of crowd do you perform best in front of? <span class="req" aria-label="required">*</span></label>
+              <textarea id="c-crowd" name="crowd" required rows="3" placeholder="Late-night bar crowd, festival crowd, comedy club..."></textarea>
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-section-title">Optional — but useful</div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="c-years">How long have you been performing?</label>
+              <input type="text" id="c-years" name="years" placeholder="e.g. 2 years" />
+            </div>
+            <div class="form-group">
+              <label for="c-clubs">Previous shows / clubs</label>
+              <input type="text" id="c-clubs" name="clubs" placeholder="e.g. The Stand NYC, Laughing Skull" />
+            </div>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="c-travel" name="travel" />
+              <span>I'm available to travel for multi-city dates.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">SUBMIT APPLICATION</button>
+          <div class="form-success" id="form-comedy-success" hidden aria-live="polite" role="status">
+            <span class="success-icon" aria-hidden="true">✓</span>
+            <strong>Application received.</strong> We'll reach out if it's a fit. Keep performing.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       COMMUNITY / EMAIL
+  ============================== -->
+  <section class="community-section" id="community" aria-labelledby="community-headline">
+    <div class="section-inner">
+      <h2 id="community-headline" class="section-headline">STAY CLOSE TO WHAT'S NEXT</h2>
+      <p class="community-sub">Drops, lineups, and early ticket access — straight to your inbox.</p>
+      <form class="community-form" id="email-form" novalidate aria-label="Join the community email list">
+        <div class="community-form-inner">
+          <label for="community-email" class="sr-only">Your email address</label>
+          <input type="email" id="community-email" name="email" required placeholder="your@email.com" autocomplete="email" aria-describedby="community-email-error" />
+          <button type="submit" class="btn btn-primary">JOIN THE WAVE</button>
+        </div>
+        <span class="field-error" id="community-email-error" role="alert"></span>
+        <div class="form-success" id="email-success" hidden aria-live="polite" role="status">
+          <span class="success-icon" aria-hidden="true">✓</span>
+          <strong>You're in.</strong> First to know. First in the room.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FINAL CTA
+  ============================== -->
+  <section class="final-cta-section" aria-labelledby="final-cta-headline">
+    <div class="section-inner">
+      <h2 id="final-cta-headline" class="section-headline">BE THERE FIRST.</h2>
+      <div class="final-cta-actions">
+        <a href="#shows" class="btn btn-primary">GET TICKETS</a>
+        <a href="#apply" class="btn btn-secondary">APPLY TO PERFORM</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">NXTWAVE</div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#shows">Shows</a>
+        <a href="#lineups">Lineups</a>
+        <a href="#apply">Apply</a>
+        <a href="#community">Community</a>
+        <a href="#about">About</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 NXTWAVE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ==============================
+       STICKY CTA BAR (desktop)
+  ============================== -->
+  <div class="sticky-cta-bar" id="sticky-cta-bar" aria-label="Quick ticket access" role="complementary">
+    <span class="sticky-cta-label">GET TICKETS:</span>
+    <div class="sticky-city-links">
+      <a href="#show-nyc" class="sticky-city-btn">NYC</a>
+      <a href="#show-atl" class="sticky-city-btn">ATL</a>
+      <a href="#show-chi" class="sticky-city-btn">CHI</a>
+    </div>
+    <a href="#shows" class="btn btn-sticky-tickets">GET TICKETS</a>
+    <button class="sticky-cta-dismiss" aria-label="Dismiss ticket bar">✕</button>
+  </div>
+
+  <!-- ==============================
+       STICKY MOBILE CTA (bottom bar)
+  ============================== -->
+  <div class="sticky-mobile-cta" id="sticky-mobile-cta" aria-label="Get tickets" role="complementary">
+    <div class="sticky-mobile-inner">
+      <div class="sticky-mobile-cities">
+        <a href="#show-nyc">NYC</a>
+        <a href="#show-atl">ATL</a>
+        <a href="#show-chi">CHI</a>
+      </div>
+      <a href="#shows" class="btn btn-primary sticky-mobile-btn">GET TICKETS</a>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
