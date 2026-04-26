@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { validateEmail } from '@/lib/utils'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -219,10 +220,6 @@ export default function HomePage() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [onScroll])
-
-  function validateEmail(v: string) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
-  }
 
   function handleEmailSubmit(e: React.FormEvent) {
     e.preventDefault()
