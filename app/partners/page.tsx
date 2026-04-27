@@ -12,9 +12,15 @@ export default function PartnersPage() {
             <span className="text-neon">next wave</span><br />
             of culture
           </h1>
-          <p className="text-muted text-base md:text-xl max-w-xl mx-auto">
+          <p className="text-muted text-base md:text-xl max-w-xl mx-auto mb-10">
             Connect your brand with emerging artists, comedians, and audiences through live touring experiences.
           </p>
+          <a
+            href="#partner-form"
+            className="inline-block border-2 border-neon text-neon font-display font-black text-base uppercase tracking-widest px-8 py-4 rounded hover:bg-neon hover:text-bg transition-colors"
+          >
+            Submit an Inquiry
+          </a>
         </div>
       </section>
 
@@ -117,7 +123,7 @@ export default function PartnersPage() {
       </section>
 
       {/* ── Inquiry Form ── */}
-      <section className="py-24 px-5 max-w-4xl mx-auto">
+      <section id="partner-form" className="py-24 px-5 max-w-4xl mx-auto">
         <div className="text-center mb-14">
           <div className="font-display font-black text-xs tracking-[0.3em] text-neon uppercase mb-3">GET IN TOUCH</div>
           <h2 className="font-display font-black text-5xl md:text-6xl tracking-tight text-[#f0f0f0]">
@@ -128,12 +134,12 @@ export default function PartnersPage() {
           <div className="p-6 border-b border-border">
             <div className="text-sm text-muted">Complete the form below and our team will reach out within 48 hours.</div>
           </div>
-          <div className="relative" style={{ minHeight: '600px' }}>
+          <div className="relative" style={{ minHeight: '900px' }}>
             <iframe
               src="https://airtable.com/embed/appeelJ8gPIe2MO2J/shrbZQKNZn68OW9SZ"
               width="100%"
-              height="600"
-              style={{ background: 'transparent', border: 0 }}
+              height="900"
+              style={{ background: 'transparent', border: 0, display: 'block' }}
               title="Partner Inquiry Form"
             />
           </div>

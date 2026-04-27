@@ -693,8 +693,8 @@ export default function HomePage() {
           <p className="text-muted text-base mb-8 max-w-xl mx-auto">
             Connect your brand with emerging artists, comedians, and audiences through live touring experiences.
           </p>
-          <Link href="/partners" className="inline-block bg-neon text-bg font-display font-black text-base uppercase tracking-widest px-8 py-4 rounded hover:bg-neon-hover transition-colors">
-            LEARN MORE
+          <Link href="/partners#partner-form" className="inline-block bg-neon text-bg font-display font-black text-base uppercase tracking-widest px-8 py-4 rounded hover:bg-neon-hover transition-colors">
+            Become a Partner
           </Link>
         </div>
       </section>
