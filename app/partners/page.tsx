@@ -1,5 +1,211 @@
 'use client'
 
+import { useState, useRef } from 'react'
+import { validateEmail } from '@/lib/utils'
+
+const PARTNERSHIP_OPTIONS = [
+  'Touring Partner',
+  'Single Event Sponsor',
+  'Brand Activation / Pop-Up',
+  'Content / Media Collaboration',
+  'Not Sure Yet',
+] as const
+
+type PartnershipOption = typeof PARTNERSHIP_OPTIONS[number] | ''
+
+const inputCls =
+  'w-full bg-surface border border-border rounded px-4 py-3 text-[#f0f0f0] text-sm placeholder-muted focus:outline-none focus:border-neon transition-colors'
+const labelCls = 'block text-xs font-bold uppercase tracking-wider text-muted mb-1.5'
+const errorCls = 'text-orange text-xs mt-1'
+
+interface FormState {
+  companyName: string
+  contactName: string
+  email: string
+  phoneNumber: string
+  partnershipInterest: PartnershipOption
+  brandMessage: string
+}
+
+const EMPTY_FORM: FormState = {
+  companyName: '',
+  contactName: '',
+  email: '',
+  phoneNumber: '',
+  partnershipInterest: '',
+  brandMessage: '',
+}
+
+function PartnerInquiryForm() {
+  const [form, setForm] = useState<FormState>(EMPTY_FORM)
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({})
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const [success, setSuccess] = useState(false)
+
+  const companyNameRef = useRef<HTMLInputElement>(null)
+  const contactNameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const partnershipInterestRef = useRef<HTMLSelectElement>(null)
+  const brandMessageRef = useRef<HTMLTextAreaElement>(null)
+
+  function set(key: keyof FormState, value: string) {
+    setForm(f => ({ ...f, [key]: value }))
+    if (errors[key]) setErrors(e => ({ ...e, [key]: undefined }))
+  }
+
+  function validate(): Partial<Record<keyof FormState, string>> {
+    const errs: Partial<Record<keyof FormState, string>> = {}
+    if (!form.companyName.trim()) errs.companyName = 'Company name is required.'
+    if (!form.contactName.trim()) errs.contactName = 'Contact name is required.'
+    if (!form.email.trim() || !validateEmail(form.email)) errs.email = 'Valid email is required.'
+    if (!form.partnershipInterest) errs.partnershipInterest = 'Please select a partnership interest.'
+    if (!form.brandMessage.trim()) errs.brandMessage = 'Please tell us about your brand.'
+    return errs
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    const errs = validate()
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs)
+      // Focus the first invalid field
+      if (errs.companyName) companyNameRef.current?.focus()
+      else if (errs.contactName) contactNameRef.current?.focus()
+      else if (errs.email) emailRef.current?.focus()
+      else if (errs.partnershipInterest) partnershipInterestRef.current?.focus()
+      else if (errs.brandMessage) brandMessageRef.current?.focus()
+      return
+    }
+    setErrors({})
+    setSubmitError('')
+    setSubmitting(true)
+    try {
+      const res = await fetch('/api/partner-inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSuccess(true)
+      } else {
+        const data = await res.json().catch(() => ({}))
+        setSubmitError(data?.error ?? 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setSubmitError('Network error. Please check your connection and try again.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  if (success) {
+    return (
+      <div className="text-center py-12">
+        <div className="text-5xl mb-4">🤝</div>
+        <div className="font-display font-black text-3xl text-neon mb-2">INQUIRY RECEIVED.</div>
+        <p className="text-muted">We&rsquo;ll reach out if it&rsquo;s a fit.</p>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+      <div className="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label className={labelCls} htmlFor="companyName">Company Name *</label>
+          <input
+            id="companyName"
+            ref={companyNameRef}
+            className={inputCls}
+            placeholder="Your company"
+            value={form.companyName}
+            onChange={e => set('companyName', e.target.value)}
+          />
+          {errors.companyName && <p className={errorCls}>{errors.companyName}</p>}
+        </div>
+        <div>
+          <label className={labelCls} htmlFor="contactName">Contact Name *</label>
+          <input
+            id="contactName"
+            ref={contactNameRef}
+            className={inputCls}
+            placeholder="Your name"
+            value={form.contactName}
+            onChange={e => set('contactName', e.target.value)}
+          />
+          {errors.contactName && <p className={errorCls}>{errors.contactName}</p>}
+        </div>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label className={labelCls} htmlFor="email">Email *</label>
+          <input
+            id="email"
+            type="email"
+            ref={emailRef}
+            className={inputCls}
+            placeholder="you@company.com"
+            value={form.email}
+            onChange={e => set('email', e.target.value)}
+          />
+          {errors.email && <p className={errorCls}>{errors.email}</p>}
+        </div>
+        <div>
+          <label className={labelCls} htmlFor="phoneNumber">Phone Number</label>
+          <input
+            id="phoneNumber"
+            type="tel"
+            className={inputCls}
+            placeholder="+1 (000) 000-0000"
+            value={form.phoneNumber}
+            onChange={e => set('phoneNumber', e.target.value)}
+          />
+        </div>
+      </div>
+      <div>
+        <label className={labelCls} htmlFor="partnershipInterest">Partnership Interest *</label>
+        <select
+          id="partnershipInterest"
+          ref={partnershipInterestRef}
+          className={inputCls}
+          value={form.partnershipInterest}
+          onChange={e => set('partnershipInterest', e.target.value)}
+        >
+          <option value="" disabled>Select an option…</option>
+          {PARTNERSHIP_OPTIONS.map(opt => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
+        </select>
+        {errors.partnershipInterest && <p className={errorCls}>{errors.partnershipInterest}</p>}
+      </div>
+      <div>
+        <label className={labelCls} htmlFor="brandMessage">Tell us about your brand and what you&apos;re looking to do *</label>
+        <textarea
+          id="brandMessage"
+          ref={brandMessageRef}
+          className={inputCls}
+          rows={5}
+          placeholder="Tell us about your brand, goals, and what kind of partnership you have in mind…"
+          value={form.brandMessage}
+          onChange={e => set('brandMessage', e.target.value)}
+        />
+        {errors.brandMessage && <p className={errorCls}>{errors.brandMessage}</p>}
+      </div>
+      {submitError && (
+        <p className="text-orange text-sm text-center">{submitError}</p>
+      )}
+      <button
+        type="submit"
+        disabled={submitting}
+        className="bg-neon text-bg font-display font-black text-base uppercase tracking-widest py-4 rounded hover:bg-neon-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {submitting ? 'Submitting…' : 'Submit Inquiry'}
+      </button>
+    </form>
+  )
+}
+
 export default function PartnersPage() {
   return (
     <main className="pt-16">
@@ -123,27 +329,14 @@ export default function PartnersPage() {
       </section>
 
       {/* ── Inquiry Form ── */}
-      <section id="partner-form" className="py-24 px-5 max-w-4xl mx-auto">
+      <section id="partner-form" className="py-24 px-5 max-w-2xl mx-auto">
         <div className="text-center mb-14">
           <div className="font-display font-black text-xs tracking-[0.3em] text-neon uppercase mb-3">GET IN TOUCH</div>
           <h2 className="font-display font-black text-5xl md:text-6xl tracking-tight text-[#f0f0f0]">
             Partner with the<br />next wave.
           </h2>
         </div>
-        <div className="bg-surface border border-border rounded-2xl overflow-hidden">
-          <div className="p-6 border-b border-border">
-            <div className="text-sm text-muted">Complete the form below and our team will reach out within 48 hours.</div>
-          </div>
-          <div className="relative" style={{ minHeight: '900px' }}>
-            <iframe
-              src="https://airtable.com/embed/appeelJ8gPIe2MO2J/shrbZQKNZn68OW9SZ"
-              width="100%"
-              height="900"
-              style={{ background: 'transparent', border: 0, display: 'block' }}
-              title="Partner Inquiry Form"
-            />
-          </div>
-        </div>
+        <PartnerInquiryForm />
       </section>
     </main>
   )
